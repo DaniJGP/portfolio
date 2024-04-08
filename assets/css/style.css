@@ -1,0 +1,12 @@
+:root {
+  --base-color: rgb(41, 45, 62);
+  --base-color-secondary: rgb(33, 31, 49);
+  --contrast-color: #d0d0d0;
+  --accent-color: rgb(255, 203, 107);
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--contrast-color);
+  text-align: center;
+}
