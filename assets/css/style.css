@@ -1,8 +1,9 @@
 :root {
   --background-color: #292d3d;
   --background-color-secondary: #14161f;
+  --background-color-tertiary: #394260;
   --foreground-color: #959dcb;
-  --neutral-color: #d0d0d0;
+  --contrast-color: #d0d0d0;
   --orangish:#f78c6c;
   --yellowish:#ffcb6b;   
   --greenish:#c3e88d;   
@@ -13,11 +14,40 @@
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: var(--contrast-color);
+  text-align: center;
+}
+
+li {
+  list-style-type: circle;
+;}
+
+.bg-theme {
+  background-color: var(--background-color);}
+
+.bg-theme2 {
+  background-color: var(--background-color-secondary)
+}
+
+.bg-theme3 {
+  background-color: var(--background-color-tertiary)}
+
+.text-accent {
+  color: var(--orangish)
+}
+
+.text-contrast {
   color: var(--contrast-color)
+}
+
+#header {
+  background-image: url(/assets/img/bg.jpg);
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: #223;
 }
 
 /*
@@ -25,8 +55,4 @@ h1, h2, h3, h4, h5, h6 {
 */
 .nav-link:hover {
   color: var(--yellowish);
-}
-
-.bg-dark {
-  color: var(--background-color-secondary)
 }
