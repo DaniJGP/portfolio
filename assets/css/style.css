@@ -1,6 +1,6 @@
 :root {
   --background-color: #292d3d;
-  --background-color-secondary: #14161f;
+  --background-color-secondary: #1d2030;
   --background-color-tertiary: #394260;
   --foreground-color: #959dcb;
   --contrast-color: #d0d0d0;
@@ -22,11 +22,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 li {
-  list-style-type: circle;
+  list-style-type: none;
 ;}
 
 .bg-theme {
-  background-color: var(--background-color);}
+  background-color: var(--background-color);
+}
 
 .bg-theme2 {
   background-color: var(--background-color-secondary)
@@ -44,6 +45,7 @@ li {
 }
 
 #header {
+  height: calc(100vh - 50px);
   background-image: url(/assets/img/bg.jpg);
   background-size: cover;
   background-blend-mode: overlay;

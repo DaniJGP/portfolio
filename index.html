@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <nav class="bg-dark navbar navbar-expand-md" data-bs-theme="dark">
+  <nav class="bg-dark navbar navbar-expand-sm" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">HOME</a>
 
@@ -30,50 +30,57 @@
     </div>
   </nav>
 
-  <header id="header" class="container-fluid py-5 vh-100">
-    <div class="d-flex">
-      <div>
-        <p id="minombre" class="display-1">DANIELA GUARDIA</p>
-        <h1 class="text-start">Desarrolladora Full-stack</h1>
-      </div>
-      <div>
-        
-      </div>
+  <header id="header" class="d-flex flex-column justify-content-between container-fluid">
+    
+    <div class="m-4 m-md-5 ">
+      <p id="minombre" class="display-1">DANIELA GUARDIA</p>
+      <h1 class="text-start">Desarrolladora Full Stack</h1>
     </div>
+      
+    <div class="align-self-end fs-3 m-4 m-md-5">
+      <a href="#">Github</a>
+      <a href="#">Twitter</a>
+    </div>
+
   </header>
 
   <section id="cv" class="container-md py-4 bg-tertiary">
 
-    <h2>Acerca de mí</h2>
+    <h2 class="mb-3">Acerca de mí</h2>
 
-    <div class="row">
+    <div class="row justify-content-center">
+
       <div class="col-12 col-md-4">
-        <h3>Lenguajes</h3>
+        <h3 class="mb-3">Lenguajes</h3>
         <ul>
-          <li class="fs-5">HTML/CSS</li>
-          <li class="fs-5">Javascript</li>
-          <li class="fs-5">Python</li>
-          <li class="fs-5">C</li>
-          <li class="fs-5">SQL</li>
+          <li >HTML/CSS</li>
+          <li >Javascript</li>
+          <li >Python</li>
+          <li >C</li>
+          <li >SQL</li>
         </ul>       
       </div>
 
       <div class="col-12 col-md-4">
-        <h3>Frameworks</h3>
-        <li class="fs-5">Bootstrap</li>
-        <li class="fs-5">Flask</li>
+        <h3 class="mb-3">Frameworks</h3>
+        <ul>
+          <li >Bootstrap</li>
+          <li >Flask</li>
+        </ul>
       </div>
 
       <div class="col-12 col-md-4">
-        <h3>Herramientas</h3>
-        <li class="fs-5">Git</li>
-        <li class="fs-5">Github</li>
-        <li class="fs-5">Linux</li>
+        <h3 class="mb-3">Herramientas</h3>
+        <ul>
+          <li >Git</li>
+          <li >Github</li>
+          <li >Linux</li>
+        </ul>
       </div>
 
-      <div class="col-12 col-md-12 col-xl-4">
-        <h3>Educación</h3>
-        <ul class="text-start">
+      <div>
+        <h3 class="mb-3">Educación</h3>
+        <ul class="bg-theme text-start">
           <li><span class="text-accent">(En progreso)</span> Bootcamp Desarrollo Full Stack Javascript - Academia Desafío Latam</li>
           <li>(2024) CS50: Introduction to Computer Science - Harvard University </li>
           <li>(2018) Bachiller en Lengua Inglesa - Pontificia Universidad Católica de Valparaíso</li>
@@ -82,15 +89,17 @@
     </div>
   </section>
 
-  <section id="portafolio">
-    <h2>Portafolio</h2>
-    <h3>Cuppon</h3>
-    <h3>Arriendo</h3>
-    <h3>Iguana</h3>
+  <section id="portafolio" class="container-fluid py-4 bg-theme2">
+    <h2 class="mb-3">Portafolio</h2>
+    <div class="row">
+      <h3>Cuppon</h3>
+      <h3>Arriendo</h3>
+      <h3>Iguana</h3>
+    </div>
   </section>
 
   <section id="contacto">
-    <h2>Contáctame</h2>
+    <h2 class="mb-3">Contáctame</h2>
     <form action="">
       <input type="text" name="nombre" id="nombre">
       <input type="email" name="email" id="email">
