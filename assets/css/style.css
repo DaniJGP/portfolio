@@ -1,12 +1,32 @@
 :root {
-  --base-color: rgb(41, 45, 62);
-  --base-color-secondary: rgb(33, 31, 49);
-  --contrast-color: #d0d0d0;
-  --accent-color: rgb(255, 203, 107);
+  --background-color: #292d3d;
+  --background-color-secondary: #14161f;
+  --foreground-color: #959dcb;
+  --neutral-color: #d0d0d0;
+  --orangish:#f78c6c;
+  --yellowish:#ffcb6b;   
+  --greenish:#c3e88d;   
+  --bluish:#82aaff;   
+  --purplish:#c792ea; 
 }
 
 body {
-  background-color: var(--base-color);
-  color: var(--contrast-color);
+  background-color: var(--background-color);
+  color: var(--foreground-color);
   text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--contrast-color)
+}
+
+/*
+  Bootstrap classes modification
+*/
+.nav-link:hover {
+  color: var(--yellowish);
+}
+
+.bg-dark {
+  color: var(--background-color-secondary)
 }
