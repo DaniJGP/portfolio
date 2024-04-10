@@ -14,6 +14,7 @@
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
+  font-family: Montserrat, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +56,7 @@ a:hover {
   background-image: url(/assets/img/bg.jpg);
   background-size: cover;
   background-blend-mode: overlay;
-  background-color: #223;
+  background-color: #14141f;
 }
 
 .bg-theme {
