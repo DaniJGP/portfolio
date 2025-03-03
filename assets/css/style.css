@@ -1,14 +1,47 @@
+/*CSS Reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
 :root {
-  --background-color: #292d3d;
-  --background-color-secondary: #1d2030;
-  --background-color-tertiary: #394260;
-  --foreground-color: #959dcb;
-  --contrast-color: #d0d0d0;
-  --orangish:#f78c6c;
-  --yellowish:#ffcb6b;   
-  --greenish:#c3e88d;   
-  --bluish:#82aaff;   
-  --purplish:#c792ea; 
+  /* Theme colors */
+  --royal-blue: #1a2b6d;
+  --berkeley-blue: #003059;
+  --orange-pantone: #ff6200;
+  --xanthous: #fcbf49;
+  --vanilla: #eae2b7;
+  /* Neutrals */
+  --white: #fdfdfe;
+  --light-gray: #c7c7c8;
+  --soft-black: #323233;
+  --black: #101011;
+  /* Theme variables*/
+  --background-color: var(--white);
+  --background-color-secondary: var(--vanilla);
+  --text-color: var(--orange-pantone);
+  --text-color-secondary: var(--vanilla);
+  --strong-accent: var(--orange-pantone);
+  --subtle-accent: var(--xanthous);
 }
 
 body {
@@ -18,22 +51,26 @@ body {
   line-height: 1.4;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--contrast-color);
   text-align: center;
 }
 
 li {
   list-style-type: none;
-;}
-
+}
 
 a {
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--yellowish)
+  color: var(--yellowish);
 }
 
 #cv .row {
@@ -42,8 +79,8 @@ a:hover {
 }
 
 #cv div.container {
-  max-width: 760px;}
-
+  max-width: 760px;
+}
 
 #portafolio a {
   color: var(--yellowish);
@@ -68,18 +105,19 @@ a:hover {
 }
 
 .bg-theme2 {
-  background-color: var(--background-color-secondary)
+  background-color: var(--background-color-secondary);
 }
 
 .bg-theme3 {
-  background-color: var(--background-color-tertiary)}
+  background-color: var(--background-color-tertiary);
+}
 
 .text-accent {
-  color: var(--orangish)
+  color: var(--orangish);
 }
 
 .text-contrast {
-  color: var(--contrast-color)
+  color: var(--contrast-color);
 }
 
 .card {
