@@ -16,18 +16,19 @@
 
 <body>
   <nav id="navbar" data-bs-theme="dark">
-    <div class="nav-left">
+    <div class="nav-navigation">
       <a href="#" class="navbar-item">HOME</a>
-      <a href="#cv" class="navbar-item">ABOUT</a>
       <a href="#portfolio" class="navbar-item">PORTFOLIO</a>
-      <a href="#links" class="navbar-item">LINKS</a>
-      <a href="#extra" class="navbar-item">EXTRA</a>
+      <a href="#skills" class="navbar-item">SKILLS</a>
+      <a href="#cv" class="navbar-item">CV</a>
+      <a href="#about" class="navbar-item">ABOUT</a>
+      <a href="#links" class="navbar-item">CONTACT ME</a>
     </div>
     <div class="nav-right">
     </div>
   </nav>
 
-  <header id="header" class="min-height">
+  <header id="header">
 
     <div class="header-content">
       <p id="minombre">DANIELA GUARDIA</p>
@@ -37,135 +38,112 @@
 
   </header>
 
-  <section id="cv" class="min-height">
-
-    <h2>Acerca de mí</h2>
-
-    <div>
-      <h3>Educación</h3>
-      <ul>
-        <div>
+  <main>
+    <section id="portfolio">
+      <div class="column-container">
+        <h2>Portafolio</h2>
+        <div class="project-container">
+          <div class="project-card">
+            <img src="assets/img/iguana-desktop.jpg" alt="Iguana">
+            <div>
+              <h3>Iguana</h3>
+              <p>Landing page estilizada utilizando CSS la propiedad flexbox para alinear el contenido
+                de manera responsiva. También se emplean íconos de FontAwesome.</p>
+              <a href="https://danijgp.github.io/adl-iguana/" target="_blank">Ver</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img/arriendo-tablet.jpg" alt="Arriendo" class="project-img">
+            <div>
+              <h3>Arriendo</h3>
+              <p>Página de arriendo de propiedades que utiliza la barra de navegación, el sistema de
+                filas y columnas, y los temas de color por defecto del framework Bootstrap.</p>
+              <a href="https://danijgp.github.io/arriendo/" target="_blank">Ver</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img/cuppon-desktop.jpg" alt="Cuppon">
+            <div>
+              <h3>Cuppon</h3>
+              <p>Sitio de descuentos que, adicionalmente, implementa modificaciones a las clases CSS de
+                Bootstrap para utilizar un tema de colores personalizado</p>
+              <a href="https://danijgp.github.io/adl-cuppon/" target="_blank">Ver</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img/cuppon-desktop.jpg" alt="Cuppon">
+            <div>
+              <h3>Cuppon</h3>
+              <p>Sitio de descuentos que, adicionalmente, implementa modificaciones a las clases CSS de
+                Bootstrap para utilizar un tema de colores personalizado</p>
+              <a href="https://danijgp.github.io/adl-cuppon/" target="_blank">Ver</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div>
+        <p>Zero</p>
+      </div>
+    </section>
+    <section id="cv" class="vh-100">
+      <h2>CV</h2>
+      <div>
+        <h3>Educación</h3>
+        <ul>
+          <div>
+            <li>
+              <div>
+                <span>(En progreso)</span> <span>Bootcamp Desarrollo Full Stack
+                  Javascript</span>
+              </div>
+              <div>Academia Desafío Latam</div>
+            </li>
+          </div>
           <li>
             <div>
-              <span>(En progreso)</span> <span>Bootcamp Desarrollo Full Stack
-                Javascript</span>
+              <span>(2024)</span> <span>CS50: Introduction to Computer
+                Science</span>
             </div>
-            <div>Academia Desafío Latam</div>
+            <div>Harvard University</div>
           </li>
-        </div>
-        <li>
-          <div>
-            <span>(2024)</span> <span>CS50: Introduction to Computer
-              Science</span>
-          </div>
-          <div>Harvard University</div>
-        </li>
-        <li>
-          <div><span>(2015-2018)</span> <span>Bachiller en Lengua
-              Inglesa</span></div>
-          <div>Pontificia Universidad Católica de Valparaíso</div>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h3>Experiencia</h3>
-      <ul>
-        <li><span>(2018-)</span> <span>Traductora inglés-español freelance</span></li>
-        <li>
-          <div><span>(2017-2019)</span> <span>Traductora voluntaria</span></div>
-          <div>Global Voices ES</div>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-
-      <div>
-        <h3>Lenguajes</h3>
-        <ul>
-          <li>HTML/CSS</li>
-          <li>Javascript</li>
-          <li>Python</li>
-          <li>C</li>
-          <li>SQL</li>
+          <li>
+            <div><span>(2015-2018)</span> <span>Bachiller en Lengua
+                Inglesa</span></div>
+            <div>Pontificia Universidad Católica de Valparaíso</div>
+          </li>
         </ul>
       </div>
-
       <div>
-        <h3>Frameworks</h3>
+        <h3>Experiencia</h3>
         <ul>
-          <li>Bootstrap</li>
-          <li>Flask</li>
+          <li><span>(2018-)</span> <span>Traductora inglés-español freelance</span></li>
+          <li>
+            <div><span>(2017-2019)</span> <span>Traductora voluntaria</span></div>
+            <div>Global Voices ES</div>
+          </li>
         </ul>
       </div>
-
       <div>
-        <h3>Herramientas</h3>
-        <ul>
-          <li>Git</li>
-          <li>Github</li>
-          <li>Linux</li>
-        </ul>
+        <div>
+          <h3>Idiomas</h3>
+          <ul>
+            <li>Español nativo</li>
+            <li>Inglés avanzado (C1)</li>
+            <li>Japonés básico (A2)</li>
+          </ul>
+        </div>
       </div>
-
+    </section>
+    <section id="about">
+      <h2>About</h2>
       <div>
-        <h3>Idiomas</h3>
-        <ul>
-          <li>Español nativo</li>
-          <li>Inglés avanzado (C1)</li>
-          <li>Japonés básico (A2)</li>
-        </ul>
+        <p>Me</p>
       </div>
-
-
-    </div>
-  </section>
-
-  <section id="portfolio" class="min-height">
-    <h2>Portafolio</h2>
-    <div class="project-container">
-      <div class="project-card">
-        <img src="assets/img/iguana-desktop.jpg" alt="Iguana">
-        <div>
-          <h3>Iguana</h3>
-          <p>Landing page estilizada utilizando CSS la propiedad flexbox para alinear el contenido
-            de manera responsiva. También se emplean íconos de FontAwesome.</p>
-          <a href="https://danijgp.github.io/adl-iguana/" target="_blank">Ver</a>
-        </div>
-      </div>
-
-      <div  class="project-card">
-        <img src="assets/img/arriendo-tablet.jpg" alt="Arriendo">
-        <div>
-          <h3>Arriendo</h3>
-          <p>Página de arriendo de propiedades que utiliza la barra de navegación, el sistema de
-            filas y columnas, y los temas de color por defecto del framework Bootstrap.</p>
-          <a href="https://danijgp.github.io/arriendo/" target="_blank">Ver</a>
-        </div>
-      </div>
-
-      <div  class="project-card">
-        <img src="assets/img/cuppon-desktop.jpg" alt="Cuppon">
-        <div>
-          <h3>Cuppon</h3>
-          <p>Sitio de descuentos que, adicionalmente, implementa modificaciones a las clases CSS de
-            Bootstrap para utilizar un tema de colores personalizado</p>
-          <a href="https://danijgp.github.io/adl-cuppon/" target="_blank">Ver</a>
-        </div>
-      </div>
-
-      <div  class="project-card">
-        <img src="assets/img/cuppon-desktop.jpg" alt="Cuppon">
-        <div>
-          <h3>Cuppon</h3>
-          <p>Sitio de descuentos que, adicionalmente, implementa modificaciones a las clases CSS de
-            Bootstrap para utilizar un tema de colores personalizado</p>
-          <a href="https://danijgp.github.io/adl-cuppon/" target="_blank">Ver</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025, Daniela Guardia</p>
