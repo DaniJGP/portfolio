@@ -24,34 +24,20 @@ button {
 }
 
 :root {
-  /* Theme colors */
-  --royal-blue: #1a2b6d;
-  --berkeley-blue: #003059;
-  --orange-pantone: #ff6200;
-  --fairy-salt: #fae1f5;
-  --xanthous: #fcbf49;
-  --vanilla: #eae2b7;
-  --light-cyan: #E1FAF9;
-
-  /* Neutrals */
-  --white: #fcfcfd;
-  --light-gray: #d7d7d8;
-  --gray: #bbb;
-  --soft-black: #424243;
-  --black: #101011;
+  /* Cool grayscale colors */
+  --white: #fbfbfe;
+  --light-gray: #e5e5e7;
+  --soft-gray:#d0d0d2;
+  --mid-gray: #b0b0b2;
+  --dark-gray: #404042;
+  --black: #19191c;
 
   /* Semantic variables*/
   --background-color-primary: var(--white);
   --background-color-secondary: var(--light-gray);
   --text-color-primary: var(--black);
-  --text-color-secondary: var(--soft-black);
-  --primary-color: var(--royal-blue);
-  --secondary-color: var(--berkeley-blue);
-  --accent-color: var(--orange-pantone);
-  --highlight-color: var(--xanthous);
+  --text-color-secondary: var(--dark-gray);
 
-  /* Transparents */
-  --transparent-white: #fcfcfd90;
 }
 
 html {
@@ -62,8 +48,11 @@ html {
 body {
   background-color: var(--background-color-primary);
   color: var(--text-color-primary);
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.4;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.33;
 }
 
 li {
@@ -92,7 +81,7 @@ a:hover {
   position: sticky;
   gap: 0;
   top: 0;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   /* border-bottom: 1px solid var(--light-gray); */
   background-color: none;
 }
@@ -108,13 +97,14 @@ a:hover {
 }
 
 .navbar-item {
-  padding: .75rem 2rem;
+  padding: 0.75rem 2rem;
   display: inline-block;
   scroll-behavior: smooth;
-  background-color: var(--light-gray);
+  /* background-color: var(--light-gray); */
   border: 1px solid var(--gray);
   border-left: none;
   border-right: none;
+  transition: background-color ease 250ms;
 }
 
 .navbar-item:first-child {
@@ -126,13 +116,14 @@ a:hover {
 }
 
 .navbar-item:hover {
-  background-color: var(--orange-pantone);
-  color: var(--white);
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
 }
 
 /* Styling by section*/
 
 #header {
+  background-color: var(--background-color-primary);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -141,18 +132,26 @@ a:hover {
   margin: 0 auto;
   padding: 0 clamp(1rem, 5vw, 8rem);
   background-size: cover;
-  color: var(--orange-pantone);
+  color: var(--primary-color);
 
   & .header-content {
     text-align: left;
-    font-size: 225%;
   }
 
-  & #minombre {
-    font-size: 9vw;
+  & #header-body {
+    font-size: 1.5rem;
+  }
+
+  & h1 {
+    font-size: 2rem;
     font-weight: 700;
   }
 
+  & #minombre {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
 }
 
 #cv .row {
