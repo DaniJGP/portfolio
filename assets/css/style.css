@@ -240,6 +240,44 @@ h2 {
 
 #skills {
   background-color: var(--background-color-primary);
+  & li {
+    margin: .5em 0;
+  }
+
+  & h3 {
+    text-align: center;
+    margin: 1em 0;}
+}
+
+.skill-list-container {
+  display: grid;
+  /* grid-auto-flow: column; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+   "a b c"
+   "a b d"
+   ;
+  gap: 1em;
+  justify-content: space-between;
+  width: 90%;
+  font-size: var(--step-0);
+  color: var(--text-color-secondary);
+}
+
+#frontend-section {
+  grid-area: a;
+}
+
+#backend-section {
+  grid-area: b;
+}
+
+#languages-section {
+  grid-area: c;
+}
+
+#other-section {
+  grid-area: d;
 }
 
 /* CV Section */
