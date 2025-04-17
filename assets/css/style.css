@@ -32,7 +32,7 @@ button {
   --mid-gray: #b0b0b2;
   --dark-gray: #404042;
   --black: #19191c;
-  --slate-blue: #5a4ba8; 
+  --slate-blue: #5a4ba8;
   --light-slate-blue: #a18edf;
   --transparent-white: #fbfbfee0;
   --transparent-off-white: #efeff3e0;
@@ -60,7 +60,6 @@ button {
 
 html {
   scroll-behavior: smooth;
-  /* TODO Update with JS */
 }
 
 body {
@@ -87,7 +86,6 @@ a:hover {
 
 h2 {
   font-size: var(--step-3);
-  margin-bottom: 0.75em;
 }
 
 /* Navbar */
@@ -118,7 +116,6 @@ h2 {
   position: relative;
   padding: 0.75em 2em;
   display: inline-block;
-  scroll-behavior: smooth;
   text-align: center;
   border: 1px solid var(--gray);
   border-left: none;
@@ -159,9 +156,6 @@ h2 {
 
 #hero {
   background-color: var(--background-color-primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: clamp(320px, 100vw, 1920px);
   margin: 0 auto;
   padding: 0 clamp(1rem, 5vw, 8rem);
@@ -197,25 +191,17 @@ h2 {
 /* Portfolio */
 
 #portfolio {
-  margin: 0 auto;
   text-align: center;
+  background-color: var(--background-color-secondary);
 }
 
 .project-grid {
-  margin: 0 auto;
+  margin-top: 1.5em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
   font-family: sans-serif;
-}
-
-.portfolio-container {
-  height: 100%;
   width: clamp(320px, 100%, 1140px);
-  margin: 0 auto;
-  background-color: var(--off-white);
-  padding: 1.5em 3em;
-  border-radius: 0.5em;
 }
 
 .project-card {
@@ -241,9 +227,19 @@ h2 {
 .section {
   min-height: 100svh;
   width: 100vw;
-  padding-top: 63px;
   overflow: hidden;
-  background-color: var(--background-color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em 1em;
+  scroll-margin-top: 57px;
+}
+
+/* Skills */
+
+#skills {
+  background-color: var(--background-color-primary);
 }
 
 /* CV Section */
@@ -260,9 +256,5 @@ h2 {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
-  }
-
-  .portfolio-container {
-    padding: 0.5em 1em;
   }
 }
