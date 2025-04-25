@@ -11,7 +11,6 @@ const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             const sectionId = entry.target.getAttribute('id');
-            console.log('The active ID section is', sectionId);
             navLinks.forEach((link) => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${sectionId}`) {
