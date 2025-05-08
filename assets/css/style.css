@@ -283,16 +283,24 @@ h2 {
   grid-area: d;
 }
 
+.skill-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
 .skill-card-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: .75em;
+  width: 100%;
 }
 
 .skill-card {
   aspect-ratio: 1 / 1;
-  width: 7em;
+  width: 6em;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -320,3 +328,6 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Icons */
+
