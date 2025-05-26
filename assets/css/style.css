@@ -99,6 +99,11 @@ h2 {
   font-size: var(--step-3);
 }
 
+h3 {
+  font-size: var(--step-2);
+  text-align: center;
+}
+
 /* Navbar */
 
 #navbar {
@@ -183,6 +188,12 @@ h2 {
     align-items: flex-start;
   }
 
+  & #header-pre {
+    font-size: var(--step-1);
+    font-weight: 500;
+    color: var(--text-color-secondary);
+  }
+
   & #header-body {
     font-size: var(--step-1);
     color: var(--text-color-secondary);
@@ -246,7 +257,8 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: var(--fluid-spacing) 0;
+  padding: var(--tight-spacing) 0;
+  gap: var(--tight-spacing);
   scroll-margin-top: 57px;
 }
 
@@ -255,10 +267,10 @@ h2 {
 #skills {
   background-color: var(--background-color-tertiary);
 
-  & h3 {
+  /* & h3 {
     text-align: center;
     margin: 2em 0;
-  }
+  } */
 
   & svg {
     height: 3em;
@@ -336,11 +348,11 @@ h2 {
 #cv {
   background-color: var(--background-color-secondary);
 
-  & h3 {
+  /* & h3 {
     font-size: var(--step-2);
     text-align: center;
     margin: 0.5em;
-  }
+  } */
 
   & li {
     margin-bottom: var(--tight-spacing);
@@ -418,13 +430,27 @@ h2 {
   & li {
     display: flex;
     align-items: center;
-    gap: .5em;
+    gap: 0.5em;
   }
 
   & svg {
     height: 2em;
     width: 2em;
   }
+}
+/* About me section */
+
+#about {
+  background-color: var(--background-color-primary);
+
+  & p {
+    margin-bottom: 1em;
+  }
+}
+
+.about-body {
+  font-size: var(--step-0);
+  width: var(--page-width-constrained);
 }
 
 @media (max-width: 911px) {
