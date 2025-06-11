@@ -67,6 +67,7 @@ button {
   --page-width-constrained: clamp(360px, 95%, 900px);
   --fluid-spacing: clamp(1rem, 5vw, 3rem);
   --tight-spacing: clamp(0.5rem, 2.5vw, 1.5rem);
+  --icon-sizing-big: clamp(3rem, 2rem + 3vw, 3.75rem);
 }
 
 html {
@@ -194,8 +195,16 @@ h3 {
 
   & svg {
     aspect-ratio: 1;
-    height: 1em;
-    display: inline;
+    height: var(--icon-sizing-big);
+    /* display: inline; */
+  }
+
+  & h1 {
+    font-size: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   & .header-content {
@@ -204,6 +213,7 @@ h3 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: var(--tight-spacing);
   }
 
   & #header-pre {
@@ -211,13 +221,7 @@ h3 {
     font-weight: 500;
     color: var(--text-color-secondary);
   }
-
-  & #header-body {
-    font-size: var(--step-1);
-    color: var(--text-color-secondary);
-  }
-
-  & h1 {
+  & #header-title {
     font-size: var(--step-5);
     font-weight: 700;
     line-height: 1.2;
@@ -227,6 +231,16 @@ h3 {
     font-size: var(--step-3);
     font-weight: 800;
     text-transform: none;
+  }
+
+  & #header-body {
+    font-size: var(--step-1);
+    color: var(--text-color-secondary);
+  }
+
+  & #header-links {
+    display: flex;
+    gap: 0.75rem;
   }
 }
 
