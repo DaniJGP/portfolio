@@ -62,9 +62,10 @@ button {
 
   /* Spacing and sizing */
   --content-width-constrained: clamp(360px, 90%, 900px);
-  --content-width-full: max(360px, 100vw);
-  --page-width-wide: clamp(360px, 95%, 1200px);
-  --page-width-constrained: clamp(360px, 95%, 900px);
+  --content-width-full: max(360px, 100%);
+  --page-layout-wide: clamp(360px, 95vw, 1200px);
+  --page-layout-default: clamp(360px, 95vw, 900px);
+  --page-layout-narrow: clamp(360px, 95vw, 640px);
   --fluid-spacing: clamp(1rem, 5vw, 3rem);
   --tight-spacing: clamp(0.5rem, 2.5vw, 1.5rem);
   --icon-sizing-big: clamp(3rem, 2rem + 3vw, 3.75rem);
@@ -103,6 +104,7 @@ h2 {
 h3 {
   font-size: var(--step-2);
   text-align: center;
+  margin-bottom: .5em;
 }
 
 /* Navbar */
@@ -123,7 +125,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: var(--page-width-wide);
+  width: var(--page-layout-wide);
 }
 
 .nav-navigation {
@@ -257,7 +259,7 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
   font-family: sans-serif;
-  width: var(--page-width-wide);
+  width: var(--page-layout-wide);
 }
 
 .project-card {
@@ -393,7 +395,7 @@ h3 {
 
 .cv-page {
   background-color: var(--background-color-primary);
-  width: var(--page-width-constrained);
+  width: var(--page-layout-default);
   padding: var(--fluid-spacing);
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -470,9 +472,9 @@ h3 {
     width: 2em;
   }
 }
-/* Personal section */
+/* About me section */
 
-#personal {
+#aboutme {
   background-color: var(--background-color-primary);
 
   & p {
@@ -480,9 +482,10 @@ h3 {
   }
 }
 
-.personal-body {
+.aboutme-body {
   font-size: var(--step-0);
-  width: var(--page-width-constrained);
+  line-height: 1.5;
+  width: var(--page-layout-narrow);
 }
 
 @media (max-width: 911px) {
