@@ -24,7 +24,7 @@ button {
 }
 
 :root {
-  /* Cool grayscale colors */
+  /* Color names */
   --white: #fbfbfe;
   --off-white: #efeff3;
   --light-gray: #e7e7ea;
@@ -47,6 +47,7 @@ button {
   --text-color-tertiary: var(--dark-gray);
   --accent-color: var(--slate-blue);
   --accent-color-light: var(--light-slate-blue);
+  --card-border-radius: 6px;
 
   /* Font sizing */
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -68,6 +69,7 @@ button {
   --page-layout-narrow: clamp(360px, 95vw, 640px);
   --fluid-spacing: clamp(1rem, 5vw, 3rem);
   --tight-spacing: clamp(0.5rem, 2.5vw, 1.5rem);
+  --spacing-s: clamp(.25rem, 1vw, .75rem);
   --icon-sizing-big: clamp(3rem, 2rem + 3vw, 3.75rem);
 }
 
@@ -91,10 +93,6 @@ li {
 
 a {
   text-decoration: none;
-}
-
-a:hover {
-  color: var(--yellowish);
 }
 
 h2 {
@@ -155,11 +153,11 @@ h3 {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: 6px;
+  bottom: 9px;
   width: 0%;
   height: 2px;
   background: var(--accent-color-light);
-  transition: width ease-in 250ms;
+  transition: width ease-in 200ms;
   transform: translateX(-50%);
 }
 
@@ -254,11 +252,10 @@ h3 {
 }
 
 .project-grid {
-  margin-top: 1.5em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  font-family: sans-serif;
+  grid-template-rows: max-content;
+  gap: 0.5rem;
   width: var(--page-layout-wide);
 }
 
@@ -270,11 +267,24 @@ h3 {
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
+  overflow: hidden;
   background-color: var(--white);
-  border: 2px solid var(--background-color-tertiary);
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  border-radius: 10px;
-  padding: 0;
+  border: 1px solid var(--background-color-tertiary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: var(--card-border-radius);
+  transition: box-shadow 200ms ease-in-out, filter 200ms ease-in-out;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  filter: saturate(0.1);
+}
+
+.project-card:hover img {
+  filter: saturate(1);
 }
 
 .project-image-container > img {
@@ -282,18 +292,92 @@ h3 {
   width: 100%;
   object-fit: cover;
   object-position: cover;
-  border-radius: 10px 10px 0 0;
+  filter: saturate(0.1);
+  transition: filter 200ms ease-in-out;
 }
 
 .project-image-container {
   width: 100%;
   aspect-ratio: 4 / 3;
-  border-radius: 10px 10px 0 0;
 }
 
+
 .project-content {
-  border-radius: 0 0 10px 10px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-s);
+  text-align: left;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.project-desc {
+  overflow-y: scroll;
+  flex-grow:1;
+}
+
+.project-desc p {
+  margin-bottom: 0.5em;
+}
+
+.project-desc a {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.project-desc a:hover {
+  color: var(--accent-color-light);
+}
+
+.project-title {
+  font-size: var(--step-1);
+  text-align: left;
+  margin-bottom: 0.25em;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 3px;
+  margin-top: var(--tight-spacing);
+}
+
+.skill-tag {
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-size: var(--step--2);
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--background-color-primary);
+  background-color: var(--accent-color);
+  cursor: default;
+  text-transform: uppercase;
+}
+
+.project-links {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+}
+
+.project-link-button {
+  color: var(--text-color-secondary);
+  font-weight: 500;
+  font-size: var(--step--1);
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.project-link-icon {
+  vertical-align: middle;
+  aspect-ratio: 1;
+  height: 2.5rem;
 }
 
 .section {
@@ -314,11 +398,6 @@ h3 {
 
 #skills {
   background-color: var(--background-color-tertiary);
-
-  /* & h3 {
-    text-align: center;
-    margin: 2em 0;
-  } */
 
   & svg {
     height: 3em;
@@ -508,6 +587,10 @@ h3 {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    filter: saturate(1);
   }
 
   .section {
