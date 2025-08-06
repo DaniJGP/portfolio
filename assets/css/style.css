@@ -68,7 +68,7 @@ button {
   --page-layout-default: clamp(360px, 95vw, 900px);
   --page-layout-narrow: clamp(360px, 95vw, 640px);
   --fluid-spacing: clamp(1rem, 5vw, 3rem);
-  --tight-spacing: clamp(0.5rem, 2.5vw, 1.5rem);
+  --spacing-m: clamp(0.5rem, 2.5vw, 1.5rem);
   --spacing-s: clamp(0.25rem, 1vw, 0.75rem);
   --icon-sizing-big: clamp(3rem, 2rem + 3vw, 3.75rem);
 }
@@ -127,7 +127,8 @@ h3 {
   width: var(--page-layout-wide);
 }
 
-.nav-navigation {
+.nav-navigation,
+.nav-home {
   display: flex;
   place-content: center;
   gap: 0.5em;
@@ -213,7 +214,7 @@ h3 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: var(--tight-spacing);
+    gap: var(--spacing-m);
   }
 
   & #header-pre {
@@ -279,10 +280,6 @@ h3 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-card img {
-  filter: saturate(0.1);
-}
-
 .project-card:hover img {
   filter: saturate(1);
 }
@@ -340,7 +337,7 @@ h3 {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 3px;
-  margin-top: var(--tight-spacing);
+  margin-top: var(--spacing-m);
 }
 
 .skill-tag {
@@ -388,8 +385,8 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: var(--tight-spacing) 0;
-  gap: var(--tight-spacing);
+  padding: var(--spacing-m) 0;
+  gap: var(--spacing-m);
   scroll-margin-top: 57px;
 }
 
@@ -481,7 +478,7 @@ h3 {
   } */
 
   & li {
-    margin-bottom: var(--tight-spacing);
+    margin-bottom: var(--spacing-m);
   }
 }
 
@@ -700,15 +697,51 @@ h3 {
 
 /* Viewport media queries */
 
-@media (max-width: 911px) {
-}
+/* @media (max-width: 911px) {
+} */
 
 @media (max-width: 576px) {
+  .nav-container {
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    width: var(--page-layout-wide);
+  }
+
+  .nav-home {
+    justify-content: space-between;
+    width: auto;
+    padding: var(--spacing-m) var(--spacing-s);
+  }
+
+  .nav-navigation {
+    max-height: 0px;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    place-content: center;
+    gap: 0.5em;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-navigation.is-open {
+    max-height: 500px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-toggle > svg {
+    height: 2rem;
+    aspect-ratio: 1;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-card img {
+  .project-image-container > img {
     filter: saturate(1);
   }
 

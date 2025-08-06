@@ -1,6 +1,8 @@
 const sections = document.querySelectorAll('.section');
 const navLinks = document.querySelectorAll('#navbar .navbar-item');
 const animatedElements = document.querySelectorAll('.animate');
+const navToggler = document.querySelector('#navToggler');
+const navNavigation = document.querySelector('#navNavigation');
 
 const observerOptions = {
     root: null,
@@ -46,4 +48,8 @@ sections.forEach((section) => {
 
 animatedElements.forEach((element) => {
   animator.observe(element);
+})
+
+navToggler.addEventListener('click', () => {
+  navNavigation.classList.toggle('is-open');
 })
