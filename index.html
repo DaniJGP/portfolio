@@ -16,17 +16,17 @@
 </head>
 
 <body>
-  <nav id="navbar"">
-    <div class=" nav-container">
-    <div class="nav-navigation">
-      <a href="#hero" class="navbar-item navbar-brand">Daniela Guardia</a>
-    </div>
-    <div class="nav-navigation">
-      <a href="#portfolio" class="navbar-item">Portfolio</a>
-      <a href="#skills" class="navbar-item">Skills</a>
-      <a href="#cv" class="navbar-item">CV</a>
-      <a href="#aboutme" class="navbar-item">About</a>
-    </div>
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-navigation">
+        <a href="#hero" class="navbar-item navbar-brand">Daniela Guardia</a>
+      </div>
+      <div class="nav-navigation">
+        <a href="#portfolio" class="navbar-item">Portfolio</a>
+        <a href="#skills" class="navbar-item">Skills</a>
+        <a href="#cv" class="navbar-item">CV</a>
+        <a href="#aboutme" class="navbar-item">About</a>
+      </div>
     </div>
   </nav>
 
@@ -34,23 +34,24 @@
 
     <div class="header-content">
       <h1>
-        <span id="header-pre">&#x1F44B; Hey! I'm</span>
-        <span id="header-nombre">Daniela Guardia</span>
-        <span id="header-title">Full Stack Developer</span>
+        <span id="header-pre" class="animate slide-from-left">&#x1F44B; Hey! I'm</span>
+        <span id="header-nombre" class="animate slide-from-left delay-s">Daniela Guardia</span>
+        <span id="header-title" class="animate slide-from-left delay-m">Full Stack Developer</span>
       </h1>
-      <p id="header-body">
+      <p class="animate slide-from-left delay-l header-desc">
         I'm passionate about building accessible, modern web applications that connect everyone &#x2728;</p>
-      <p id="header-links">
+      <p class="header-links">
         <a href="https://github.com/DaniJGP/" target="_blank" aria-label="Github profile">
-          <svg>
+          <svg class="animate rotate-icon delay-s">
             <use href="assets/icons/icons.svg#skill-icons--github-dark"></use>
           </svg>
         </a>
-        <a href="https://codepen.io/DaniJGP" target="_blank" aria-label="Codepen showcase"><svg>
+        <a href="https://codepen.io/DaniJGP" target="_blank" aria-label="Codepen showcase">
+          <svg class="animate rotate-icon delay-m">
             <use href="assets/icons/icons.svg#skill-icons--codepen-dark"></use>
           </svg></a>
         <a href="https://www.linkedin.com/in/daniela-guardia-3425bb317/" target="_blank" aria-label="Linkedin profile">
-          <svg>
+          <svg class="animate rotate-icon delay-l">
             <use href="assets/icons/icons.svg#skill-icons--linkedin"></use>
           </svg>
         </a>
@@ -62,89 +63,89 @@
 
   <main>
     <section id="portfolio" class="section">
-      <h2>My projects</h2>
+      <h2 class="animate slide-from-left delay-s">My projects</h2>
       <div class="project-grid">
-
-        <article class="project-card">
+        <article class="project-card animate slide-from-left delay-s">
           <div class="project-image-container"><img src="assets/img/portfolio-d1.jpg" alt="Portfolio"></div>
           <div class="project-content">
             <h3 class="project-title">Portfolio Website</h3>
             <div class="project-desc">
-              <p>My personal playground, and the very website you're on! Built from the ground up using only HTML, CSS and
+              <p>My personal playground, and the very website you're on! Built from the ground up using only HTML, CSS
+                and
                 vanilla JavaScript, it has taught me robust accessibility features, SVG sprites
-              for scalable icon use, subtle CSS animations.</p>
+                for scalable icon use, subtle CSS animations.</p>
               </p>
+            </div>
+            <div class="project-skills">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Accessibility</span>
+              <span class="skill-tag">SVG</span>
+            </div>
+            <footer class="project-links">
+              <a href="#" target="_blank" rel="noopener" class="project-link-button">
+                <svg class="project-link-icon">
+                  <use href="assets/icons/icons.svg#ic--outline-play-circle" role="img"></use>
+                </svg>
+                <span>DEMO</span>
+              </a>
+              <a href="https://github.com/DaniJGP/portfolio" target="_blank" rel="noopener" class="project-link-button">
+                <svg class="project-link-icon">
+                  <use href="assets/icons/icons.svg#mdi--github" role="img"></use>
+                </svg>
+                <span>GITHUB</span></a>
+            </footer>
           </div>
-          <div class="project-skills">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Accessibility</span>
-            <span class="skill-tag">SVG</span>
-          </div>
-          <footer class="project-links">
-            <a href="#" target="_blank" rel="noopener"
-              class="project-link-button">
-              <svg class="project-link-icon">
-                <use href="assets/icons/icons.svg#ic--outline-play-circle" role="img"></use>
-              </svg>
-              <span>DEMO</span>
-            </a>
-            <a href="https://github.com/DaniJGP/portfolio" target="_blank" rel="noopener" class="project-link-button">
-              <svg class="project-link-icon">
-                <use href="assets/icons/icons.svg#mdi--github" role="img"></use>
-              </svg>
-              <span>GITHUB</span></a>
-          </footer>
-      </div>
-      </article>
+        </article>
 
-      <article class="project-card">
+        <article class="project-card animate slide-from-left delay-m">
 
-        <div class="project-image-container"><img src="assets/img/galeria-d1.jpg" alt="Galería Arte"></div>
-        <div class="project-content">
-          <h3 class="project-title">Galería Arte</h3>
-          <div class="project-desc">
-            <p>A full-stack art gallery e-commerce web application. It features secure user
-              registration, JWT-secured log-in sessions, shopping cart, buy order processing. It also includes an admin
-              panel functionality for the management of inventory, user accounts and incoming orders.</p>
-            <p>Built in collaboration with <a href="https://joacozun.github.io/" target="_blank"
-                rel="noopener noreferrer">@joacozun</a>.</p>
+          <div class="project-image-container"><img src="assets/img/galeria-d1.jpg" alt="Galería Arte"></div>
+          <div class="project-content">
+            <h3 class="project-title">Galería Arte</h3>
+            <div class="project-desc">
+              <p>A full-stack art gallery e-commerce web application. It features secure user
+                registration, JWT-secured log-in sessions, shopping cart, buy order processing. It also includes an
+                admin
+                panel functionality for the management of inventory, user accounts and incoming orders.</p>
+              <p>Built in collaboration with <a href="https://joacozun.github.io/" target="_blank"
+                  rel="noopener noreferrer">@joacozun</a>.</p>
+            </div>
+            <div class="project-skills">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Full-Stack Development</span>
+              <span class="skill-tag">JWT Authentication</span>
+            </div>
+            <footer class="project-links">
+              <a href="https://galeria-arte-82xx.onrender.com/" target="_blank" rel="noopener"
+                class="project-link-button">
+                <svg class="project-link-icon">
+                  <use href="assets/icons/icons.svg#ic--outline-play-circle" role="img"></use>
+                </svg>
+                <span>DEMO</span>
+              </a>
+              <a href="https://github.com/DaniJGP/galeria-arte" target="_blank" rel="noopener"
+                class="project-link-button"> <svg class="project-link-icon">
+                  <use href="assets/icons/icons.svg#mdi--github" role="img"></use>
+                </svg>
+                <span>GITHUB</span></a>
+            </footer>
           </div>
-          <div class="project-skills">
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Full-Stack Development</span>
-            <span class="skill-tag">JWT Authentication</span>
-          </div>
-          <footer class="project-links">
-            <a href="https://galeria-arte-82xx.onrender.com/" target="_blank" rel="noopener"
-              class="project-link-button">
-              <svg class="project-link-icon">
-                <use href="assets/icons/icons.svg#ic--outline-play-circle" role="img"></use>
-              </svg>
-              <span>DEMO</span>
-            </a>
-            <a href="https://github.com/DaniJGP/galeria-arte" target="_blank" rel="noopener"
-              class="project-link-button"> <svg class="project-link-icon">
-                <use href="assets/icons/icons.svg#mdi--github" role="img"></use>
-              </svg>
-              <span>GITHUB</span></a>
-          </footer>
-        </div>
-      </article>
+        </article>
 
 
     </section>
 
     <section id="skills" class="section">
-      <h2>My Skills</h2>
+      <h2 class="animate slide-from-left delay-s">My Skills</h2>
       <div class="skills-grid">
         <div id="frontend-section" class="skill-section">
-          <h3>Frontend</h3>
-          <div class="skill-card-container vertical">
+          <h3 class="animate slide-from-left delay-s">Frontend</h3>
+          <div class="skill-card-container vertical animate slide-from-left delay-m">
             <div class="skill-card">
               <svg>
                 <use href="assets/icons/icons.svg#icon-html"></use>
@@ -172,8 +173,8 @@
           </div>
         </div>
         <div id="backend-section" class="skill-section">
-          <h3>Backend</h3>
-          <div class="skill-card-container vertical">
+          <h3 class="animate slide-from-left delay-s">Backend</h3>
+          <div class="skill-card-container vertical animate slide-from-left delay-m">
             <div class="skill-card">
               <svg>
                 <use href="assets/icons/icons.svg#icon-nodejs"></use>
@@ -207,8 +208,8 @@
           </div>
         </div>
         <div id="languages-section" class="skill-section">
-          <h3>Languages</h3>
-          <div class="skill-card-container">
+          <h3 class="animate slide-from-right delay-s">Languages</h3>
+          <div class="skill-card-container animate slide-from-right delay-m">
             <div class="skill-card">
               <svg>
                 <use href="assets/icons/icons.svg#icon-javascript"></use>
@@ -230,8 +231,8 @@
           </div>
         </div>
         <div id="other-section" class="skill-section">
-          <h3>Technologies</h3>
-          <div class="skill-card-container">
+          <h3 class="animate slide-from-right delay-s">Technologies</h3>
+          <div class="skill-card-container animate slide-from-right delay-m">
             <div class="skill-card">
               <svg>
                 <use href="assets/icons/icons.svg#icon-git"></use>
@@ -256,7 +257,7 @@
     </section>
 
     <section id="cv" class="section">
-      <div class="cv-page">
+      <div class="cv-page animate slide-from-bottom delay-m">
         <div class="cv-main-header">
           <h2>Daniela Guardia</h2>
           <span></span>
@@ -368,17 +369,16 @@
 
 
     <section id="aboutme" class="section">
-      <h2>About me</h2>
-      <div class="aboutme-body">
+      <h2 class="animate slide-from-bottom delay-m">About me</h2>
+      <div class="aboutme-body animate slide-from-bottom delay-m">
         <p>Welcome! I'm Daniela, a full-stack web developer specialized in Javascript and Python who's always eager to
           learn new technologies and expand my skillset.</p>
         <p>I'm an optimist at heart, still holding onto the idealism of the early internet, exploring ways to build
           applications that are not only technically sound, but also accessible to everyone, everywhere. My goal is to
           contribute to creating a more inclusive digital space that breaks down barriers and brings people closer
-          together.</p>
-        <p>Beyond the world of code, I'm a self-taught language learner and heavy-metal guitarist; I'm working on
-          intermediate-level Japanese material, with the current goal of tackling the advanced JLPT N2 test this
-          December! I'm also a lover of strategy games and Formula 1 fanatic.</p>
+          together.</p>a
+        intermediate-level Japanese material, with the current goal of tackling the advanced JLPT N2 test this
+        December! I'm also a lover of strategy games and Formula 1 fanatic.</p>
       </div>
     </section>
   </main>
