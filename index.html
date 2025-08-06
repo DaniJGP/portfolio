@@ -20,17 +20,19 @@
     <div class="nav-container">
       <div class="nav-home">
         <a href="#hero" class="navbar-item navbar-brand">Daniela Guardia</a>
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-navigation" id="navToggler">
-          <svg>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="#navNavigation" id="navToggler">
+          <svg aria-label="icon">
             <use href="assets/icons/icons.svg#ic--baseline-menu"></use>
           </svg>
         </button>
       </div>
       <div class="nav-navigation" id="navNavigation">
-        <a href="#portfolio" class="navbar-item">Portfolio</a>
-        <a href="#skills" class="navbar-item">Skills</a>
-        <a href="#cv" class="navbar-item">CV</a>
-        <a href="#aboutme" class="navbar-item">About</a>
+        <div class="nav-list" id="navList">
+            <a href="#portfolio" class="navbar-item">Portfolio</a>
+            <a href="#skills" class="navbar-item">Skills</a>
+            <a href="#cv" class="navbar-item">CV</a>
+            <a href="#aboutme" class="navbar-item">About</a>
+        </div>
       </div>
     </div>
   </nav>

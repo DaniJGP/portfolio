@@ -127,7 +127,7 @@ h3 {
   width: var(--page-layout-wide);
 }
 
-.nav-navigation,
+.nav-list,
 .nav-home {
   display: flex;
   place-content: center;
@@ -288,7 +288,7 @@ h3 {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: cover;
+  /* object-position: cover; */
   filter: saturate(0.1);
   transition: filter 200ms ease-in-out;
 }
@@ -454,7 +454,6 @@ h3 {
 
 .skill-card {
   aspect-ratio: 1 / 1;
-  padding: auto;
   width: 6rem;
   display: flex;
   flex-direction: column;
@@ -714,18 +713,21 @@ h3 {
     padding: var(--spacing-m) var(--spacing-s);
   }
 
-  .nav-navigation {
-    max-height: 0px;
-    overflow: hidden;
+  .nav-list {
     flex-direction: column;
     display: flex;
     place-content: center;
     gap: 0.5em;
-    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-navigation {
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.3s ease-in-out;
   }
 
   .nav-navigation.is-open {
-    max-height: 500px;
+    height: var(--menu-height-mobile, 205px);
   }
 
   .nav-toggle {
