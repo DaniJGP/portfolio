@@ -609,12 +609,12 @@ h3 {
   animation-fill-mode: both;
 }
 
-.slide-left {
+.slide-from-right {
   opacity: 0;
   transform: translateX(50px);
 }
 
-.slide-left.is-visible {
+.slide-from-right.is-visible {
   animation-name: SlideFromRight;
   animation-fill-mode: both;
 }
