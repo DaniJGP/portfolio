@@ -36,7 +36,7 @@ button {
   --slate-blue: #5a4ba8;
   --light-slate-blue: #a18edf;
   --transparent-white: #fbfbfee0;
-  --transparent-off-white: #efeff3e0;
+  --transparent-off-white: #efeff3a0;
 
   /* Semantic variables*/
   --background-color-primary: var(--white);
@@ -68,13 +68,14 @@ button {
   --page-layout-default: clamp(360px, 95vw, 900px);
   --page-layout-narrow: clamp(360px, 95vw, 640px);
   --fluid-spacing: clamp(1rem, 5vw, 3rem);
-  --spacing-m: clamp(0.5rem, 2.5vw, 1.5rem);
-  --spacing-s: clamp(0.25rem, 1vw, 0.75rem);
+  --spacing-m: clamp(0.75rem, 2vw, 1rem);
+  --spacing-s: clamp(0.5rem, 1vw, 0.75rem);
   --icon-sizing-big: clamp(3rem, 2rem + 3vw, 3.75rem);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height, '50px');
 }
 
 body {
@@ -112,8 +113,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   background-color: var(--transparent-off-white);
   backdrop-filter: blur(15px);
   padding: 0.375rem 0;
@@ -140,12 +143,9 @@ h3 {
 
 .navbar-item {
   position: relative;
-  padding: 0.75em 2em;
+  padding: var(--spacing-m);
   display: inline-block;
   text-align: center;
-  border: 1px solid var(--gray);
-  border-left: none;
-  border-right: none;
   border-radius: 4px;
   background-color: inherit;
   transition: box-shadow 500ms ease, background-color 500ms ease;
@@ -377,8 +377,7 @@ h3 {
 }
 
 .section {
-  /* TODO Fix magic navbar height number */
-  min-height: calc(100svh - 58px);
+  min-height: calc(100svh - var(--navbar-height, '60px'));
   width: 100vw;
   overflow: hidden;
   display: flex;
@@ -387,7 +386,6 @@ h3 {
   flex-direction: column;
   padding: var(--spacing-m) 0;
   gap: var(--spacing-m);
-  scroll-margin-top: 57px;
 }
 
 /* Skills */
@@ -700,6 +698,7 @@ h3 {
 } */
 
 @media (max-width: 576px) {
+
   .nav-container {
     flex-direction: column;
     justify-content: stretch;
@@ -750,7 +749,7 @@ h3 {
   .section {
     height: auto;
     /* TODO Fix magic navbar height number */
-    min-height: calc(100svh - 40px);
+    min-height: calc(100svh - var(--navbar-height, -57px));
   }
 
   .skills-grid {
