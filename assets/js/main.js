@@ -1,11 +1,16 @@
 const sections = document.querySelectorAll('.section');
 const navLinks = document.querySelectorAll('#navbar .navbar-item');
 const animatedElements = document.querySelectorAll('.animate');
+const navbar = document.getElementById('navbar');
+const navToggler = document.querySelector('#navToggler');
+const navNavigation = document.querySelector('#navNavigation');
+const navList = document.querySelector('#navList');
+const root = document.documentElement;
 
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.55,
+    threshold: 0.5,
 };
 
 const animatorOptions = {
@@ -31,9 +36,9 @@ const observerCallback = (entries, observer) => {
 const animatorCallback = (entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        };
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        }
     });
 };
 
@@ -45,5 +50,23 @@ sections.forEach((section) => {
 });
 
 animatedElements.forEach((element) => {
-  animator.observe(element);
-})
+    animator.observe(element);
+});
+
+navToggler.addEventListener('click', () => {
+    const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
+    if (!isExpanded) {
+        const contentHeight = navList.getBoundingClientRect().height;
+        navNavigation.style.setProperty(
+            '--menu-height-mobile',
+            `${contentHeight}px`
+        );
+    }
+    navNavigation.classList.toggle('is-open');
+    navToggler.setAttribute('aria-expanded', !isExpanded);
+});
+
+root.style.setProperty(
+    '--navbar-height',
+    `${navbar.getBoundingClientRect().height}px`
+);
