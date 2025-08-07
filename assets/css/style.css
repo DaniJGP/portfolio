@@ -261,12 +261,11 @@ h3 {
 }
 
 .project-card {
-  width: auto;
+  width: 100%;
   height: auto;
   aspect-ratio: 4/7;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
   align-items: center;
   overflow: hidden;
   background-color: var(--white);
@@ -303,6 +302,7 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: var(--spacing-s);
+  gap: var(--spacing-s);
   text-align: left;
   justify-content: space-between;
   overflow: hidden;
@@ -377,7 +377,7 @@ h3 {
 }
 
 .section {
-  min-height: calc(100svh - var(--navbar-height, '60px'));
+  min-height: 100svh;
   width: 100vw;
   overflow: hidden;
   display: flex;
@@ -742,14 +742,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .project-image-container > img {
-    filter: saturate(1);
+  .project-card {
+    aspect-ratio: auto;
   }
 
-  .section {
-    height: auto;
-    /* TODO Fix magic navbar height number */
-    min-height: calc(100svh - var(--navbar-height, -57px));
+  .project-image-container > img {
+    filter: saturate(1);
   }
 
   .skills-grid {
@@ -766,4 +764,22 @@ h3 {
   #other-section {
     grid-area: unset;
   }
+
+  .skill-card-container {
+  gap: 1rem;
+}
+
+  .skill-card-container.vertical {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  }
+
+  .skill-card {
+  width: auto;
+  background-color: unset;
+  box-shadow: none;
+}
+
 }
