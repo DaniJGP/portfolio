@@ -54,14 +54,19 @@ animatedElements.forEach((element) => {
 });
 
 navToggler.addEventListener('click', () => {
-
     const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
     if (!isExpanded) {
         const contentHeight = navList.getBoundingClientRect().height;
-        navNavigation.style.setProperty('--menu-height-mobile', `${contentHeight}px`);
+        navNavigation.style.setProperty(
+            '--menu-height-mobile',
+            `${contentHeight}px`
+        );
     }
     navNavigation.classList.toggle('is-open');
     navToggler.setAttribute('aria-expanded', !isExpanded);
 });
 
-root.style.setProperty('--navbar-height', `${navbar.getBoundingClientRect().height}px`);
+root.style.setProperty(
+    '--navbar-height',
+    `${navbar.getBoundingClientRect().height}px`
+);
