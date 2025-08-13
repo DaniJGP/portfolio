@@ -71,11 +71,14 @@ button {
   --spacing-m: clamp(0.75rem, 2vw, 1rem);
   --spacing-s: clamp(0.5rem, 1vw, 0.75rem);
   --icon-sizing-big: clamp(3rem, 2rem + 3vw, 3.75rem);
+
+  /* Fallback values */
+  --navbar-height: 77px;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--navbar-height, '50px');
+  scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -599,52 +602,75 @@ h3 {
 
 /* Animation classes */
 
-.animate {
+.js-enabled .animate {
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
 
-.delay-s {
+.js-enabled .delay-s {
   animation-delay: 0.1s;
 }
 
-.delay-m {
+.js-enabled .delay-m {
   animation-delay: 0.2s;
 }
 
-.delay-l {
+.js-enabled .delay-l {
   animation-delay: 0.3s;
 }
 
-.delay-xl {
+.js-enabled .delay-xl {
   animation-delay: 0.5s;
 }
 
-.slide-from-left.is-visible {
-  animation-name: SlideFromLeft;
-  animation-fill-mode: both;
+.js-enabled .slide-from-left {
+  opacity: 0;
 }
 
-.slide-from-right.is-visible {
+.js-enabled .slide-from-left.is-visible {
+  animation-name: SlideFromLeft;
+}
+
+.js-enabled .slide-from-right {
+  opacity: 0;
+}
+
+.js-enabled .slide-from-right.is-visible {
   animation-name: SlideFromRight;
 }
 
-.slide-from-bottom.is-visible {
+.js-enabled .slide-from-bottom {
+  opacity: 0;
+}
+
+.js-enabled .slide-from-bottom.is-visible {
   animation-name: SlideFromBottom;
 }
 
-.slide-from-top.is-visible {
+.js-enabled .slide-from-top {
+  opacity: 0;
+}
+
+.js-enabled .slide-from-top.is-visible {
   animation-name: SlideFromTop;
 }
 
-.rotate-icon.is-visible {
+.js-enabled .rotate-icon {
+  opacity: 0;
+}
+
+.js-enabled .rotate-icon.is-visible {
   animation-name: spinMe;
   animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
-.fade-bounce.is-visible {
+.js-enabled .fade-bounce {
+  opacity: 0;
+}
+
+.js-enabled .fade-bounce.is-visible {
   animation: fadeIn 0.5s ease-in 0.5s both,
-  bounce 2s ease-in-out 0.5s alternate infinite;
+    bounce 2s ease-in-out 0.5s alternate infinite;
 }
 
 /* Animations */
@@ -661,7 +687,7 @@ h3 {
 @keyframes shadowPulse {
   0%,
   100% {
-    text-shadow: 0 0 0 0;
+    text-shadow: 0 0 0 var(--accent-color-light);
     transform: scale(1);
   }
   50% {
