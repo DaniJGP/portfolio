@@ -1,3 +1,5 @@
+document.body.classList.add('js-enabled');
+
 const sections = document.querySelectorAll('.section');
 const navLinks = document.querySelectorAll('#navbar .navbar-item');
 const animatedElements = document.querySelectorAll('.animate');

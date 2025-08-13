@@ -30,8 +30,8 @@ button {
   --light-gray: #e7e7ea;
   --soft-gray: #d0d0d3;
   --mid-gray: #a0a0a3;
-  --dark-gray: #777779;
-  --black-gray: #404042;
+  --dark-gray: #656567;
+  --black-gray: #303042;
   --black: #19191c;
   --slate-blue: #5a4ba8;
   --light-slate-blue: #a18edf;
@@ -71,11 +71,14 @@ button {
   --spacing-m: clamp(0.75rem, 2vw, 1rem);
   --spacing-s: clamp(0.5rem, 1vw, 0.75rem);
   --icon-sizing-big: clamp(3rem, 2rem + 3vw, 3.75rem);
+
+  /* Fallback values */
+  --navbar-height: 77px;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--navbar-height, '50px');
+  scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -184,6 +187,7 @@ h3 {
 }
 
 /* Styling by section*/
+
 /* Header */
 
 #hero {
@@ -192,7 +196,7 @@ h3 {
   background-color: var(--background-color-primary);
   width: var(--content-width-full);
   margin: 0 auto;
-  padding: 0 clamp(1rem, 5vw, 8rem);
+  padding: var(--spacing-m);
   background-size: cover;
   color: var(--primary-color);
 
@@ -210,10 +214,11 @@ h3 {
   }
 
   & .header-content {
+    flex: 1;
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     gap: var(--spacing-m);
   }
@@ -244,6 +249,20 @@ h3 {
     display: flex;
     gap: 0.75rem;
   }
+}
+
+.scroll-button {
+  font-size: var(--step-0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color-primary);
+}
+
+.scroll-arrow {
+  aspect-ratio: 1;
+  width: 2rem;
+  flex: 1;
 }
 
 /* Portfolio */
@@ -351,6 +370,11 @@ h3 {
   background-color: var(--accent-color);
   cursor: default;
   text-transform: uppercase;
+  transition: transform 0.1s ease-out;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
 }
 
 .project-links {
@@ -365,6 +389,7 @@ h3 {
   color: var(--text-color-secondary);
   font-weight: 500;
   font-size: var(--step--1);
+  transition: color 0.3s ease-out;
 
   &:hover {
     color: var(--accent-color);
@@ -577,71 +602,97 @@ h3 {
 
 /* Animation classes */
 
-.animate {
+.js-enabled .animate {
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
 
-.delay-s {
+.js-enabled .delay-s {
   animation-delay: 0.1s;
 }
 
-.delay-m {
+.js-enabled .delay-m {
   animation-delay: 0.2s;
 }
 
-.delay-l {
+.js-enabled .delay-l {
   animation-delay: 0.3s;
 }
 
-.slide-from-left {
-  opacity: 0;
-  transform: translateX(-50px);
+.js-enabled .delay-xl {
+  animation-delay: 0.5s;
 }
 
-.slide-from-left.is-visible {
+.js-enabled .slide-from-left {
+  opacity: 0;
+}
+
+.js-enabled .slide-from-left.is-visible {
   animation-name: SlideFromLeft;
-  animation-fill-mode: both;
 }
 
-.slide-from-right {
+.js-enabled .slide-from-right {
   opacity: 0;
-  transform: translateX(50px);
 }
 
-.slide-from-right.is-visible {
+.js-enabled .slide-from-right.is-visible {
   animation-name: SlideFromRight;
-  animation-fill-mode: both;
 }
 
-.slide-from-bottom {
+.js-enabled .slide-from-bottom {
   opacity: 0;
-  transform: translateY(25px);
 }
 
-.slide-from-bottom.is-visible {
+.js-enabled .slide-from-bottom.is-visible {
   animation-name: SlideFromBottom;
-  animation-fill-mode: both;
 }
 
-.rotate-icon {
+.js-enabled .slide-from-top {
+  opacity: 0;
+}
+
+.js-enabled .slide-from-top.is-visible {
+  animation-name: SlideFromTop;
+}
+
+.js-enabled .rotate-icon {
+  opacity: 0;
+}
+
+.js-enabled .rotate-icon.is-visible {
   animation-name: spinMe;
   animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
-.pulse-effect {
-  animation: pulse 2s infinite ease-in-out;
+.js-enabled .fade-bounce {
+  opacity: 0;
+}
+
+.js-enabled .fade-bounce.is-visible {
+  animation: fadeIn 0.5s ease-in 0.5s both,
+    bounce 2s ease-in-out 0.5s alternate infinite;
 }
 
 /* Animations */
 
-@keyframes pulse {
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shadowPulse {
   0%,
   100% {
+    text-shadow: 0 0 0 var(--accent-color-light);
     transform: scale(1);
   }
   50% {
-    transform: scale(1.025);
+    text-shadow: 0 2px 10px var(--accent-color-light);
+    transform: scale(1.02);
   }
 }
 
@@ -693,6 +744,37 @@ h3 {
   }
 }
 
+@keyframes SlideFromTop {
+  from {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.025);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
 /* Viewport media queries */
 
 @media (max-width: 768px) {

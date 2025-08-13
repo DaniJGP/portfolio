@@ -22,7 +22,7 @@
         <a href="#hero" class="navbar-item navbar-brand">Daniela Guardia</a>
         <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"
           aria-controls="#navNavigation" id="navToggler">
-          <svg aria-label="icon">
+          <svg aria-label="Toggle menu icon">
             <use href="assets/icons/icons.svg#ic--baseline-menu"></use>
           </svg>
         </button>
@@ -64,8 +64,13 @@
           </svg>
         </a>
       </p>
-
     </div>
+    <a href="#portfolio" class="scroll-button animate fade-bounce">
+      <p class="animate slide-from-bottom delay-xl">Scroll to projects!</p>
+      <svg aria-hidden="true" class="scroll-arrow">
+        <use href="assets/icons/icons.svg#material-symbols--arrow-downward-rounded"></use>
+      </svg>
+    </a>
 
   </header>
 
@@ -93,13 +98,13 @@
             </div>
             <footer class="project-links">
               <a href="#" target="_blank" rel="noopener" class="project-link-button">
-                <svg class="project-link-icon">
+                <svg class="project-link-icon" aria-hidden="true">
                   <use href="assets/icons/icons.svg#ic--outline-play-circle" role="img"></use>
                 </svg>
                 <span>DEMO</span>
               </a>
               <a href="https://github.com/DaniJGP/portfolio" target="_blank" rel="noopener" class="project-link-button">
-                <svg class="project-link-icon">
+                <svg class="project-link-icon" aria-hidden="true">
                   <use href="assets/icons/icons.svg#mdi--github" role="img"></use>
                 </svg>
                 <span>GITHUB</span></a>
@@ -109,7 +114,9 @@
 
         <article class="project-card animate slide-from-left delay-m">
 
-          <div class="project-image-container"><img src="assets/img/galeria-d1.jpg" alt="Galería Arte"></div>
+          <div class="project-image-container"><img src="assets/img/galeria-d1.jpg"
+              alt="A website titled Galería Arte, showing colorful art pieces in a grid with their respective names and prices">
+          </div>
           <div class="project-content">
             <h3 class="project-title">Galería Arte</h3>
             <div class="project-desc">
@@ -131,14 +138,14 @@
             <footer class="project-links">
               <a href="https://galeria-arte-82xx.onrender.com/" target="_blank" rel="noopener"
                 class="project-link-button">
-                <svg class="project-link-icon">
+                <svg class="project-link-icon" aria-hidden="true">
                   <use href="assets/icons/icons.svg#ic--outline-play-circle" role="img"></use>
                 </svg>
                 <span>DEMO</span>
               </a>
               <a href="https://github.com/DaniJGP/galeria-arte" target="_blank" rel="noopener"
-                class="project-link-button"> <svg class="project-link-icon">
-                  <use href="assets/icons/icons.svg#mdi--github" role="img"></use>
+                class="project-link-button"> <svg class="project-link-icon" aria-hidden="true">
+                  <use href="assets/icons/icons.svg#mdi--github"></use>
                 </svg>
                 <span>GITHUB</span></a>
             </footer>
@@ -155,25 +162,25 @@
           <h3 class="animate slide-from-left delay-s">Frontend</h3>
           <div class="skill-card-container vertical animate slide-from-left delay-m">
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-html"></use>
               </svg>
               <p>HTML</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-css"></use>
               </svg>
               <p>CSS</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-bootstrap"></use>
               </svg>
               <p>Bootstrap</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-react"></use>
               </svg>
               <p>React</p>
@@ -184,31 +191,31 @@
           <h3 class="animate slide-from-left delay-s">Backend</h3>
           <div class="skill-card-container vertical animate slide-from-left delay-m">
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-nodejs"></use>
               </svg>
               <p>Node.js</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-express"></use>
               </svg>
               <p>Express</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-flask"></use>
               </svg>
               <p>Flask</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-postgresql"></use>
               </svg>
               <p>PostgreSQL</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-sqlite"></use>
               </svg>
               <p>SQLite</p>
@@ -219,19 +226,19 @@
           <h3 class="animate slide-from-right delay-s">Languages</h3>
           <div class="skill-card-container animate slide-from-right delay-m">
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-javascript"></use>
               </svg>
               <p>Javascript</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-typescript"></use>
               </svg>
               <p>Typescript</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-python"></use>
               </svg>
               <p>Python</p>
@@ -242,19 +249,19 @@
           <h3 class="animate slide-from-right delay-s">Technologies</h3>
           <div class="skill-card-container animate slide-from-right delay-m">
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-git"></use>
               </svg>
               <p>Git</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-linux"></use>
               </svg>
               <p>Linux</p>
             </div>
             <div class="skill-card">
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#icon-bash"></use>
               </svg>
               <p>bash</p>
@@ -271,7 +278,7 @@
           <span></span>
           <a href="#" download="Daniela_Guardia_CV.pdf" class="cv-download-button">
             <span>PDF</span>
-            <svg>
+            <svg aria-hidden="true">
               <use href="assets/icons/icons.svg#material-symbols--download"></use>
             </svg>
           </a>
@@ -353,19 +360,19 @@
           <h3>Language Proficiency</h3>
           <ul class="cv-lang-list">
             <li>
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#emojione--flag-for-chile"></use>
               </svg>
               <span>Spanish: Native</span>
             </li>
             <li>
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#emojione--flag-for-united-states"></use>
               </svg>
               <span>English: Fluent</span>
             </li>
             <li>
-              <svg>
+              <svg aria-hidden="true">
                 <use href="assets/icons/icons.svg#emojione--flag-for-japan"></use>
               </svg>
               <span>Japanese: Intermediate</span>
