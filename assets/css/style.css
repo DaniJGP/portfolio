@@ -587,7 +587,7 @@ h3 {
   min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
   background-color: var(--background-color-primary);
   padding: var(--spacing-l) var(--spacing-s);
-  gap: var(--spacing-l);
+  gap: var(--spacing-s);
 
   & p {
     margin-bottom: 1em;
@@ -602,12 +602,16 @@ h3 {
 
 
 .footer-container {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: var(--step--1);
   background-color: var(--background-color-tertiary);
   color: var(--text-color-secondary);
-  padding: var(--spacing-s);
+  padding: var(--spacing-m);
+  gap: var(--spacing-s)
 }
 
 .footer-text {
