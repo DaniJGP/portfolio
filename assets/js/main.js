@@ -7,6 +7,7 @@ const navbar = document.getElementById('navbar');
 const navToggler = document.querySelector('#navToggler');
 const navNavigation = document.querySelector('#navNavigation');
 const navList = document.querySelector('#navList');
+const footer = document.querySelector('.footer-container');
 const root = document.documentElement;
 
 const observerOptions = {
@@ -58,7 +59,7 @@ animatedElements.forEach((element) => {
 navToggler.addEventListener('click', () => {
     const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
     if (!isExpanded) {
-        const contentHeight = navList.getBoundingClientRect().height;
+        const contentHeight = navList.offsetHeight;
         navNavigation.style.setProperty(
             '--menu-height-mobile',
             `${contentHeight}px`
@@ -70,5 +71,7 @@ navToggler.addEventListener('click', () => {
 
 root.style.setProperty(
     '--navbar-height',
-    `${navbar.getBoundingClientRect().height}px`
+    `${navbar.offsetHeight}px`
 );
+
+root.style.setProperty('--footer-height', `${footer.offsetHeight}px`)
