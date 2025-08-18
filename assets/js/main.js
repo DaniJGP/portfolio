@@ -19,7 +19,7 @@ const observerOptions = {
 const animatorOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.25,
+    threshold: 0.1,
 };
 
 const observerCallback = (entries, observer) => {
