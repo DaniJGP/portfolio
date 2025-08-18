@@ -105,13 +105,13 @@ a {
 
 h2 {
   font-size: var(--step-3);
-  margin: 0.5em auto;
+  margin: 0.5em;
 }
 
 h3 {
   font-size: var(--step-2);
   text-align: center;
-  margin: 0.5em auto;
+  margin: 0.5em;
 }
 
 /* Navbar */
@@ -288,11 +288,9 @@ h3 {
 .project-card {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/7;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   background-color: var(--white);
   border: 1px solid var(--background-color-tertiary);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -312,7 +310,6 @@ h3 {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  /* object-position: cover; */
   filter: saturate(0.1);
   transition: filter 200ms ease-in-out;
 }
@@ -326,16 +323,15 @@ h3 {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: var(--spacing-s);
   gap: var(--spacing-s);
   text-align: left;
-  justify-content: space-between;
-  overflow: hidden;
 }
 
 .project-desc {
-  overflow-y: scroll;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 .project-desc p {
@@ -354,7 +350,8 @@ h3 {
 .project-title {
   font-size: var(--step-1);
   text-align: left;
-  margin-bottom: 0.25em;
+  align-self: flex-start;
+  margin: 0;
 }
 
 .project-skills {
