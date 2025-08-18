@@ -62,11 +62,11 @@ button {
   --step-5: clamp(2.4883rem, 1.5239rem + 4.8219vw, 5.2609rem);
 
   /* Spacing and sizing */
-  --content-width-constrained: clamp(320px, 90%, 900px);
-  --content-width-full: max(320px, 100%);
-  --page-layout-wide: clamp(320px, 95vw, 1200px);
-  --page-layout-default: clamp(320px, 95vw, 900px);
-  --page-layout-narrow: clamp(320px, 95vw, 640px);
+  --content-width-constrained: clamp(300px, 90%, 900px);
+  --content-width-full: max(300px, 100%);
+  --page-layout-wide: clamp(300px, 95vw, 1200px);
+  --page-layout-default: clamp(300px, 95vw, 900px);
+  --page-layout-narrow: clamp(300px, 95vw, 640px);
   --fluid-spacing: clamp(1rem, 5vw, 3rem);
   --spacing-l: clamp(1rem, 3vw, 1.5rem);
   --spacing-m: clamp(0.75rem, 2vw, 1rem);
@@ -80,6 +80,8 @@ button {
 
 html {
   scroll-behavior: smooth;
+  overflow: auto;
+  scroll-snap-type: y proximity;
   scroll-padding-top: var(--navbar-height);
 }
 
@@ -103,7 +105,7 @@ a {
 
 h2 {
   font-size: var(--step-3);
-  margin: .5em auto;
+  margin: 0.5em auto;
 }
 
 h3 {
@@ -194,12 +196,12 @@ h3 {
 /* Header */
 
 #hero {
-  height: 100svh;
-  justify-content: center;
+  min-height: 100svh;
+  justify-content: safe center;
   background-color: var(--background-color-primary);
   width: var(--content-width-full);
-  margin: 0 auto;
   padding: var(--spacing-m);
+  padding-top: var(--navbar-height);
   background-size: cover;
   color: var(--primary-color);
 
@@ -406,6 +408,7 @@ h3 {
 }
 
 .section {
+  scroll-snap-align: start;
   min-height: 100svh;
   width: 100vw;
   overflow: hidden;
@@ -600,7 +603,6 @@ h3 {
   width: var(--page-layout-narrow);
 }
 
-
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -611,7 +613,7 @@ h3 {
   background-color: var(--background-color-tertiary);
   color: var(--text-color-secondary);
   padding: var(--spacing-m);
-  gap: var(--spacing-s)
+  gap: var(--spacing-s);
 }
 
 .footer-text {
@@ -630,7 +632,8 @@ h3 {
   aspect-ratio: 1;
 
   &:hover {
-  color: var(--accent-color)}
+    color: var(--accent-color);
+  }
 }
 
 /* Animation classes */
@@ -901,5 +904,9 @@ h3 {
     width: auto;
     background-color: unset;
     box-shadow: none;
+  }
+
+  .cv-lang-list {
+    flex-wrap: wrap;
   }
 }
