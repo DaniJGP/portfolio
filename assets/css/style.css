@@ -204,56 +204,57 @@ h3 {
   padding-top: var(--navbar-height);
   background-size: cover;
   color: var(--primary-color);
+}
 
-  & svg {
-    width: var(--icon-sizing-big);
-    height: auto;
-  }
+.hero-heading-group { /* Reemplaza el 'h1' anidado */
+  font-size: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
-  & h1 {
-    font-size: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
+.header-content {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--spacing-m);
+}
 
-  & .header-content {
-    flex: 1;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: var(--spacing-m);
-  }
+.header-pre {
+  font-size: var(--step-1);
+  font-weight: 500;
+  color: var(--text-color-secondary);
+}
 
-  & #header-pre {
-    font-size: var(--step-1);
-    font-weight: 500;
-    color: var(--text-color-secondary);
-  }
-  & #header-title {
-    font-size: var(--step-5);
-    font-weight: 700;
-    line-height: 1.2;
-  }
+.header-title {
+  font-size: var(--step-5);
+  font-weight: 700;
+  line-height: 1.2;
+}
 
-  & #header-nombre {
-    font-size: var(--step-3);
-    font-weight: 800;
-    text-transform: none;
-  }
+.header-name {
+  font-size: var(--step-3);
+  font-weight: 800;
+  text-transform: none;
+}
 
-  & .header-desc {
-    font-size: var(--step-1);
-    color: var(--text-color-secondary);
-  }
+.header-desc {
+  font-size: var(--step-1);
+  color: var(--text-color-secondary);
+}
 
-  & .header-links {
-    display: flex;
-    gap: 0.75rem;
-  }
+.header-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.hero-svg {
+  width: var(--icon-sizing-big);
+  height: auto;
 }
 
 .scroll-button {
@@ -269,6 +270,7 @@ h3 {
   width: 2rem;
   flex: 1;
 }
+
 
 /* Portfolio */
 
