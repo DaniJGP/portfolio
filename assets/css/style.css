@@ -25,16 +25,16 @@ button {
 
 :root {
   /* Color names */
-  --white: #f8f8f8;
-  --off-white: #e8e8e8;
+  --white: #f8f8f9;
+  --off-white: #e5e5e6;
   --light-gray: #d7d7d8;
   --silver: #b0b1b2;
-  --slate-gray: #909092;
+  --slate-gray: #909192;
   --steel-gray: #656567;
   --dark-gray: #424344;
   --graphite: #303031;
   --charcoal: #202021;
-  --black: #070707;
+  --black: #070708;
   --slate-blue: #5a4ba8;
   --light-slate-blue: #a18edf;
   --transparent-white: #ebebeee0;
@@ -312,8 +312,8 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--white);
-  border: 1px solid var(--background-color-tertiary);
+  background-color: var(--background-color-primary);
+  border: 1px solid var(--background-transparent);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   border-radius: var(--card-border-radius);
   transition: box-shadow 200ms ease-in-out, filter 200ms ease-in-out;
@@ -441,7 +441,7 @@ h3 {
 /* Skills */
 
 #skills {
-  background-color: var(--background-color-tertiary);
+  background-color: var(--background-color-primary);
 
   & svg {
     height: 3em;
