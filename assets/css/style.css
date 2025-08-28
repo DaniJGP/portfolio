@@ -40,6 +40,8 @@ button {
   --transparent-white: #ebebeee0;
   --transparent-black: #202021a0;
   --transparent-off-white: #efeff3a0;
+  --white-shadow: #fff2;
+  --black-shadow: #0002;
 
   /* Semantic variables*/
   --background-color-primary: var(--white);
@@ -51,6 +53,7 @@ button {
   --text-color-tertiary: var(--steel-gray);
   --accent-color: var(--slate-blue);
   --accent-color-light: var(--light-slate-blue);
+  --shadow-color: var(--black-shadow);
   --card-border-radius: 6px;
 
   /* Font sizing */
@@ -85,15 +88,16 @@ button {
 /* Dark Theme */
 @media (prefers-color-scheme: dark) {
   :root {
-  --background-color-primary: var(--charcoal);
-  --background-color-secondary: var(--graphite);
-  --background-color-tertiary: var(--dark-gray);
-  --background-transparent: var(--transparent-black);
-  --text-color-primary: var(--off-white);
-  --text-color-secondary: var(--light-gray);
-  --text-color-tertiary: var(--silver);
-  --accent-color: var(--light-slate-blue);
-  --accent-color-light: var(--slate-blue);
+    --background-color-primary: var(--charcoal);
+    --background-color-secondary: var(--graphite);
+    --background-color-tertiary: var(--dark-gray);
+    --background-transparent: var(--transparent-black);
+    --text-color-primary: var(--off-white);
+    --text-color-secondary: var(--light-gray);
+    --text-color-tertiary: var(--silver);
+    --accent-color: var(--light-slate-blue);
+    --accent-color-light: var(--slate-blue);
+    --shadow-color: var(--white-shadow)
   }
 }
 
@@ -200,9 +204,8 @@ h3 {
 }
 
 .navbar-item.active {
-  background-color: var(--white);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: var(--background-color-primary);
+  box-shadow: 0px 0px 2px 2px var(--shadow-color);
 }
 
 .navbar-brand {
@@ -225,7 +228,7 @@ h3 {
   color: var(--primary-color);
 }
 
-.hero-heading-group { /* Reemplaza el 'h1' anidado */
+.hero-heading-group {
   font-size: inherit;
   display: flex;
   flex-direction: column;
@@ -289,7 +292,6 @@ h3 {
   width: 2rem;
   flex: 1;
 }
-
 
 /* Portfolio */
 
@@ -657,9 +659,10 @@ h3 {
 /* Viewport media queries */
 
 @media (prefers-color-scheme: dark) {
-.project-image-container > img {
-  opacity: 0.86;
-}}
+  .project-image-container > img {
+    opacity: 0.86;
+  }
+}
 
 @media (max-width: 768px) {
   .project-grid {
