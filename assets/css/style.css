@@ -656,6 +656,11 @@ h3 {
 
 /* Viewport media queries */
 
+@media (prefers-color-scheme: dark) {
+.project-image-container > img {
+  opacity: 0.86;
+}}
+
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr 1fr;
