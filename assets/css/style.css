@@ -49,7 +49,7 @@ button {
   --background-color-tertiary: var(--light-gray);
   --background-transparent: var(--transparent-white);
   --text-color-primary: var(--charcoal);
-  --text-color-secondary: var(--graphite);
+  --text-color-secondary: var(--dark-gray);
   --text-color-tertiary: var(--steel-gray);
   --accent-color: var(--slate-blue);
   --accent-color-light: var(--light-slate-blue);
@@ -97,7 +97,7 @@ button {
     --text-color-tertiary: var(--silver);
     --accent-color: var(--light-slate-blue);
     --accent-color-light: var(--slate-blue);
-    --shadow-color: var(--white-shadow)
+    --shadow-color: var(--white-shadow);
   }
 }
 
@@ -211,6 +211,21 @@ h3 {
 .navbar-brand {
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.nav-utils {
+  flex-basis: 4rem;
+  color: var(--text-color-secondary);
+}
+
+.navbar-darkmode-toggle {
+  height: 2rem;
+  vertical-align: middle;
+}
+
+.navbar-darkmode-toggle svg {
+  height: 100%;
+  width: 100%;
 }
 
 /* Styling by section*/
@@ -695,6 +710,7 @@ h3 {
   }
 
   .nav-navigation {
+    flex: 1;
     overflow: hidden;
     height: 0px;
     transition: height 0.3s ease-in-out;
