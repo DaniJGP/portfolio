@@ -62,7 +62,7 @@ git clone https://github.com/DaniJGP/portfolio
 
 ## Roadmap
 
-* [x] Dark/Light theme toggler
+* [X] Dark/Light theme toggler
 * [ ] Transition to using 11ty for generating HTML
   * [ ] Add blogging capabilities
   * [ ] Add Spanish language version
@@ -85,7 +85,7 @@ Emoji artwork is provided by [Emojitwo], originally released as [Emojione 2.2][E
 <!-- CONTACT -->
 ## Contact
 
-[![email][email]][email-url] [![x.com][x]][x-url]
+[![email][email]][email-url] [![x.com][x-shield]][x-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,5 +107,5 @@ Emoji artwork is provided by [Emojitwo], originally released as [Emojione 2.2][E
 [CC-BY-40]: https://creativecommons.org/licenses/by/4.0/legalcode
 [email]: https://img.shields.io/badge/d.guardiaprado%40gmail.com-white?style=flat&logo=gmail
 [email-url]: mailto:d.guardiaprado@gmail.com
-[x]: https://img.shields.io/badge/dani__jgp-black?style=flat&logo=x
+[x-shield]: https://img.shields.io/badge/dani__jgp-black?style=flat&logo=x
 [x-url]: https://x.com/dani_jgp
