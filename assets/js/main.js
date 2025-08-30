@@ -7,6 +7,7 @@ const navbar = document.getElementById('navbar');
 const navToggler = document.querySelector('#navToggler');
 const navNavigation = document.querySelector('#navNavigation');
 const navList = document.querySelector('#navList');
+const navThemeToggler = document.querySelector('#navThemeToggler');
 const footer = document.querySelector('.footer-container');
 const root = document.documentElement;
 
@@ -60,7 +61,7 @@ navToggler.addEventListener('click', () => {
     const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
     if (!isExpanded) {
         const contentHeight = navList.offsetHeight;
-        navNavigation.style.setProperty(
+        root.style.setProperty(
             '--menu-height-mobile',
             `${contentHeight}px`
         );
@@ -69,9 +70,34 @@ navToggler.addEventListener('click', () => {
     navToggler.setAttribute('aria-expanded', !isExpanded);
 });
 
-root.style.setProperty(
-    '--navbar-height',
-    `${navbar.offsetHeight}px`
-);
+root.style.setProperty('--navbar-height', `${navbar.offsetHeight}px`);
 
-root.style.setProperty('--footer-height', `${footer.offsetHeight}px`)
+root.style.setProperty('--footer-height', `${footer.offsetHeight}px`);
+
+// Theme toggling
+
+function getUserTheme() {
+    const storedTheme = localStorage.getItem('theme');
+    if (!storedTheme) {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
+    }
+    return storedTheme;
+}
+
+function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
+setTheme(getUserTheme());
+
+navThemeToggler.addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+});
+
+
+
