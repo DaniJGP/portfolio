@@ -34,8 +34,9 @@ A single-page portfolio website built from scractch using only HTML, CSS and Jav
 * **Graceful Degradation**: The website's core content is fully accessible even if JavaScript is disabled.
 * **On-Scroll Animations**: Elements fade and slide into view as the user scrolls, powered by the efficient IntersectionObserver API.
 * **Smooth Navigation**: The navigation menu has a smooth expand/collapse animation for mobile viewports, and the active navigation link is highlighted automatically based on the user's scroll position.
-* **SVG Sprite Logos**: All logos are stored in a single icons.svg file and accessed through the `<use>` syntax in the HTML.
+* **SVG Sprite Logos**: All logos are stored in a single icons.svg file and accessed through the `<use>` syntax in the HTML for a improved performance.
 * **Accessible Markup**: The site uses semantic HTML and ARIA attributes for a better experience for users of assistive technologies.
+* **Light and Dark themes**: The theme respects the system-level preference for a light or dark theme and can be manually be toggled with a button.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,7 +62,7 @@ git clone https://github.com/DaniJGP/portfolio
 
 ## Roadmap
 
-* [ ] Dark/Light theme toggler
+* [x] Dark/Light theme toggler
 * [ ] Transition to using 11ty for generating HTML
   * [ ] Add blogging capabilities
   * [ ] Add Spanish language version
